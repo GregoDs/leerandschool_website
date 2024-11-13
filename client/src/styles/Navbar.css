@@ -1,0 +1,86 @@
+/* Font settings */
+body {
+  font-family: 'Helvetica Neue', sans-serif; /* Use Helvetica Neue or a similar sans-serif font */
+  background-image: url('/path/to/your/background-image.jpg'); /* Ensure the background image is set on the body or a container */
+  background-size: cover; /* Cover the entire background */
+  background-position: center center; /* Center the background image */
+  margin: 0;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent; /* Set navbar background to fully transparent */
+  padding: 20px 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: none; /* Remove shadow to make it fully transparent */
+  z-index: 1000;
+  font-family: 'Helvetica Neue', sans-serif; /* Navbar font */
+}
+
+/* Navbar logo */
+.navbar-logo img {
+  max-height: 50px;
+  margin-right: 20px;
+}
+
+/* Navbar links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #fff; /* White color for links to ensure visibility on background */
+  font-weight: 700;
+  font-size: 16px;
+  transition: color 0.3s, transform 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: #9c1d1d; /* Harvard red color on hover */
+  transform: translateY(-3px); /* Slight upward projection effect */
+}
+
+/* Button styles */
+.enquire-button {
+  padding: 10px 20px;
+  background-color: #9c1d1d; /* Harvard red */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.enquire-button:hover {
+  background-color: #7d1616; /* Slightly darker red on hover */
+  transform: translateY(-3px); /* Slight upward projection effect */
+}
+
+/* Offset body content to make room for the fixed navbar */
+body {
+  padding-top: 80px; /* Adjust this based on navbar height */
+}
+
+/* Optional: Adjust the navbar size for responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .navbar-links {
+    display: none; /* You can add a hamburger menu here for mobile */
+  }
+
+  .enquire-button {
+    padding: 8px 15px;
+  }
+}

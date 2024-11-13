@@ -1,0 +1,48 @@
+/* Home.css */
+.home-container {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://d3rsva8zdn1qpf.cloudfront.net/sites/school93/files/styles/ins_banner/public/2023-02/students-on_a-bench_3.jpg.jpeg?itok=iLJU8dzH 1920w');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px); /* Adjusts for navbar height */
+    text-align: center;
+    color: white;
+  }
+  
+  .hero-text h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .tour-button {
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 25px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .tour-button:hover {
+    background-color: white;
+    color: black;
+  }
+  
