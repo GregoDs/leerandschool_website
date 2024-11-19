@@ -25,16 +25,40 @@ function Home() {
             <p>
               We strive to cultivate a love for learning, respect for diversity, and a sense of responsibility toward our community. With a focus on both academic excellence and personal growth, Leerand School aims to equip our students with the skills and mindset they need to succeed in the ever-changing world.
             </p>
+            <p>#We are Leerand # We are Family</p>
           </div>
           <div className="we-image">
             <img
-              src="/images/school-building.jpg" // Replace with your actual image
-              alt="Leerand School Building"
+              src="/images/girlsfrontlawn2.jpg" // Replace with your actual image
               className="school-image"
             />
           </div>
         </div>
       </div>
+      <div className="quote-section">
+  <p className="quote-text">
+    "The goal of early childhood education <br />  should be to activate the<br />
+    child's own natural desire to learn."<br />
+  </p>
+  <p className="quote-author">  —  Maria Montessori </p>
+</div>
+<div className="campus-section">
+      <div className="campus-description">
+        <h1>Our Campuses</h1>
+        <p>Explore our vibrant campuses, each offering unique learning environments designed to nurture growth, creativity, and excellence in every student.</p>
+      </div>
+      <div className="campus-images">
+        <div className="campus">
+          <img src="/images/mainCampus.jpeg" alt="Main Campus" />
+          <h3>Main Campus</h3>
+        </div>
+        <div className="campus">
+          <img src="/images/schoolcampuspark.jpg" alt="Second Campus" />
+          <h3>Second Campus</h3>
+        </div>
+      </div>
+      </div>
+
     </div>
   );
 }

@@ -35,6 +35,12 @@ html, body {
   color: #7d1616;
 }
 
+.navbar.scrolled .school-name {
+  color: #7d1616; /* Links color changes to black */
+}
+.navbar.scrolled .divider{
+ background-color:#7d1616;
+}
 
 /* Left Section */
 .navbar-left {
@@ -63,6 +69,7 @@ html, body {
   flex-direction: column;
   align-items: flex-start;
   white-space: nowrap;
+ 
 }
 
 .school-name h1 {

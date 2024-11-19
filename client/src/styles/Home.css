@@ -32,6 +32,7 @@ body {
   width: 100%;
   height: 100vh;
   background-image: url('https://d3rsva8zdn1qpf.cloudfront.net/sites/school93/files/styles/ins_banner/public/2023-02/students-on_a-bench_3.jpg.jpeg?itok=iLJU8dzH');
+   /* background-image: url('https://scontent-fra5-2.xx.fbcdn.net/v/t39.30808-6/430023600_927529959380618_2008295951936327172_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeF5XJyWiIA0LE0vZyReojmgCfnDsoKSFSYJ-cOygpIVJiKxqE0IB3rKB1qQoJXozurloaOQF320dbvf4y82utZo&_nc_ohc=iekp0UN89jMQ7kNvgHn40GR&_nc_zt=23&_nc_ht=scontent-fra5-2.xx&_nc_gid=AvhpaSCa0nWJdeoiU9ZaAQL&oh=00_AYCEzL-2R1pTm2wJbT9AwbWct-oaYdJArv4sHaepn4NZUg&oe=67423A2D');*/
   background-size: cover;
   background-position: center;
   display: flex;
@@ -146,22 +147,24 @@ body {
   max-width: 1200px; /* Limit the width of the section */
   width: 100%;
   gap: 40px; /* Space between text and image */
+ 
 }
 
 .we-text {
   flex: 1; /* Text takes up the available space */
+  margin-top: 40px;
 }
 
 .we-text h2 {
-  font-size: 2rem;
+  font-size: 2.0rem;
   font-weight: bold;
   margin-bottom: 20px;
   color: #333; /* Dark text color */
 }
 
 .we-text p {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.9;
   color: #333; /* Lighter text for readability */
   margin-bottom: 15px;
 }
@@ -174,10 +177,11 @@ body {
 }
 
 .school-image {
-  width: 100%;
-  max-width: 500px; /* Adjust the size of the image */
-  height: auto;
+  width: 400%;
+  max-width:450px; /* Adjust the size of the image */
+  height: 450px;
   object-fit: cover; /* Ensure the image fills the space without distortion */
+  margin-top: 40px;
 }
 
 /* Responsive Styling */
@@ -196,10 +200,146 @@ body {
   }
 
   .we-text p {
-    font-size: 0.9rem; /* Smaller text for mobile */
+    font-size: 1.0rem; /* Smaller text for mobile */
   }
 
   .school-image {
     max-width: 100%; /* Make image responsive on smaller screens */
   }
+
+
+
+
+
+}
+
+/* Quote Section Styles */
+.quote-section {
+  background-color: white; /* Light background color */
+  padding: 10vw 5%; /* Responsive padding using viewport width */
+  text-align: center; /* Center-align the text */
+  height: 110vh; /* Make the section take up the full height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center content vertically */
+  flex-direction: column; /* Ensure text flows vertically */
+}
+
+/* Styling for the quote text */
+.quote-text {
+  font-size: 2.5rem; /* Default font size for larger screens */
+  font-weight: bold;
+  font-family: 'Crimson Text', serif; /* Same font family */
+  line-height: 1.5; /* Increased line height for better readability */
+  color: #333; /* Dark gray text */
+  max-width: 90%; /* Make sure text container doesn't exceed the screen */
+  margin: 0 auto; /* Center the text container */
+  word-wrap: break-word; /* Allow words to wrap if they are too long */
+  white-space: pre-wrap; /* Preserve white space and allow for manual line breaks */
+  display: inline-block; /* Allow for line break and alignment */
+  text-align: center; /* Center align text within the container */
+}
+
+/* This will limit the number of words per line by controlling the width */
+.quote-text span {
+  display: inline-block;
+  width: 100%;
+}
+
+/* Styling for the author name */
+.quote-author {
+  display: block;
+  font-size: 1.5rem; /* Default font size for the author */
+  font-weight: normal;
+  color: grey; /* Slightly lighter gray for the author */
+  margin-top: 20px; /* More space between quote and author */
+  font-style: italic;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .quote-section {
+    padding: 15vw 5%; /* Adjust padding for smaller screens */
+  }
+
+  .quote-text {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+    max-width: 85%; /* Limit the width of the text container */
+  }
+
+  .quote-author {
+    font-size: 1.2rem; /* Adjust font size for author */
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-section {
+    padding: 20vw 5%; /* Even smaller padding for very small screens */
+  }
+
+  .quote-text {
+    font-size: 1.75rem; /* Smaller font size for very small screens */
+    max-width: 80%; /* Further limit the width of the text container */
+  }
+
+  .quote-author {
+    font-size: 1rem; /* Smaller font size for the author */
+  }
+}
+
+
+/* Campus Section Styles */
+.campus-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 90vh; /* Increased height for the section */
+  padding: 20px;
+  background-color: white; /* Light background color */
+}
+
+.campus-description {
+  max-width: 800px; /* Limit width for better readability */
+  font-size: 1.1rem; /* Adjust font size */
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 10px; /* Reduce space between description and images */
+}
+
+.campus-description h1 {
+  font-size: 2.0rem;
+  font-weight: 100;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  color: black;
+}
+
+.campus-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px; /* Adjust spacing between campuses for better balance */
+  width: 100%;
+}
+
+.campus {
+  text-align: center;
+  max-width: 450px; /* Increase max-width for individual campus */
+}
+
+.campus img {
+  width: 100%; /* Allow image to scale to container width */
+  height: auto;
+  border-radius: 0px; /* No rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.campus h3 {
+  margin-top: 10px;
+  font-size: 1.5rem; /* Slightly increase font size for titles */
+  font-weight: bold;
+  color: #333;
 }
