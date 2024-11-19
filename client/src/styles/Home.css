@@ -1,48 +1,205 @@
-/* Home.css */
+/* Global Styles */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Georgia', 'Crimson Text', serif;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
 .home-container {
-    height: 100vh;
-    width: 100vw;
-    background-image: url('https://d3rsva8zdn1qpf.cloudfront.net/sites/school93/files/styles/ins_banner/public/2023-02/students-on_a-bench_3.jpg.jpeg?itok=iLJU8dzH 1920w');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - 80px); /* Adjusts for navbar height */
-    text-align: center;
-    color: white;
-  }
-  
-  .hero-text h2 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 10px;
-  }
-  
+  width: 100%; /* Changed from 100vw to 100% */
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-section {
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://d3rsva8zdn1qpf.cloudfront.net/sites/school93/files/styles/ins_banner/public/2023-02/students-on_a-bench_3.jpg.jpeg?itok=iLJU8dzH');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 0 30px; /* Adjust to horizontal padding only */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+
+.image-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.hero-text {
+  font-family: 'Crimson Text', serif;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  color: white;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-top: 300px;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  letter-spacing: 0.3px;
+}
+
+.tour-button {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  padding: 10px 20px;
+  border: 2px solid #8a1c1c;
+  border-radius: 25px;
+  background-color: #8a1c1c;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tour-button:hover {
+  background-color: white;
+  color: #8a1c1c;
+  transform: scale(1.05);
+}
+
+/* Media Queries for Responsiveness */
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .hero-text h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
   }
-  
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
   .tour-button {
-    padding: 10px 20px;
-    border: 2px solid white;
-    border-radius: 25px;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
   }
-  
-  .tour-button:hover {
-    background-color: white;
-    color: black;
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2rem;
   }
-  
+
+  .hero-text p {
+    font-size: 0.875rem;
+  }
+
+  .tour-button {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* General Styles for We Section */
+.we-section {
+  background-color: white; /* White background */
+  padding: 60px 20px; /* Top and bottom padding */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+}
+
+.we-content {
+  display: flex;
+  justify-content: space-between; /* Align text and image side by side */
+  max-width: 1200px; /* Limit the width of the section */
+  width: 100%;
+  gap: 40px; /* Space between text and image */
+}
+
+.we-text {
+  flex: 1; /* Text takes up the available space */
+}
+
+.we-text h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333; /* Dark text color */
+}
+
+.we-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333; /* Lighter text for readability */
+  margin-bottom: 15px;
+}
+
+/* Image Styling */
+.we-image {
+  flex: 1; /* Image takes up the available space */
+  display: flex;
+  justify-content: flex-end; /* Align the image to the right */
+}
+
+.school-image {
+  width: 100%;
+  max-width: 500px; /* Adjust the size of the image */
+  height: auto;
+  object-fit: cover; /* Ensure the image fills the space without distortion */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .we-content {
+    flex-direction: column; /* Stack text and image vertically on smaller screens */
+    text-align: center;
+  }
+
+  .we-image {
+    margin-top: 20px;
+  }
+
+  .we-text h2 {
+    font-size: 1.5rem; /* Smaller heading for mobile */
+  }
+
+  .we-text p {
+    font-size: 0.9rem; /* Smaller text for mobile */
+  }
+
+  .school-image {
+    max-width: 100%; /* Make image responsive on smaller screens */
+  }
+}
