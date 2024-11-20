@@ -6,7 +6,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   margin: 0;
   font-family: 'Georgia', 'Crimson Text', serif;
@@ -15,11 +14,33 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-
 .home-container {
-  width: 100%; /* Changed from 100vw to 100% */
+  width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+
+/* General transition */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+}
+
+
+/* Optional: Add a slight delay for each section to appear more staggered */
+.reveal:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.reveal:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.reveal:nth-child(3) {
+  transition-delay: 0.6s;
 }
 
 .hero-section {
@@ -32,7 +53,6 @@ body {
   width: 100%;
   height: 100vh;
   background-image: url('https://d3rsva8zdn1qpf.cloudfront.net/sites/school93/files/styles/ins_banner/public/2023-02/students-on_a-bench_3.jpg.jpeg?itok=iLJU8dzH');
-   /* background-image: url('https://scontent-fra5-2.xx.fbcdn.net/v/t39.30808-6/430023600_927529959380618_2008295951936327172_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeF5XJyWiIA0LE0vZyReojmgCfnDsoKSFSYJ-cOygpIVJiKxqE0IB3rKB1qQoJXozurloaOQF320dbvf4y82utZo&_nc_ohc=iekp0UN89jMQ7kNvgHn40GR&_nc_zt=23&_nc_ht=scontent-fra5-2.xx&_nc_gid=AvhpaSCa0nWJdeoiU9ZaAQL&oh=00_AYCEzL-2R1pTm2wJbT9AwbWct-oaYdJArv4sHaepn4NZUg&oe=67423A2D');*/
   background-size: cover;
   background-position: center;
   display: flex;
@@ -42,7 +62,6 @@ body {
   padding: 0 30px; /* Adjust to horizontal padding only */
   overflow-x: hidden; /* Prevent horizontal overflow */
 }
-
 
 .image-section::before {
   content: "";
@@ -101,8 +120,6 @@ body {
 
 /* Media Queries for Responsiveness */
 
-
-/* Responsive Styles */
 @media (max-width: 768px) {
   .hero-text h1 {
     font-size: 2.5rem;
@@ -134,60 +151,59 @@ body {
 }
 
 /* General Styles for We Section */
+
 .we-section {
-  background-color: white; /* White background */
-  padding: 60px 20px; /* Top and bottom padding */
+  background-color: white;
+  padding: 60px 20px;
   display: flex;
-  justify-content: center; /* Center the content horizontally */
+  justify-content: center;
 }
 
 .we-content {
   display: flex;
-  justify-content: space-between; /* Align text and image side by side */
-  max-width: 1200px; /* Limit the width of the section */
+  justify-content: space-between;
+  max-width: 1200px;
   width: 100%;
-  gap: 40px; /* Space between text and image */
- 
+  gap: 40px;
 }
 
 .we-text {
-  flex: 1; /* Text takes up the available space */
+  flex: 1;
   margin-top: 40px;
 }
 
 .we-text h2 {
-  font-size: 2.0rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #333; /* Dark text color */
+  color: #333;
 }
 
 .we-text p {
   font-size: 1.05rem;
   line-height: 1.9;
-  color: #333; /* Lighter text for readability */
+  color: #333;
   margin-bottom: 15px;
 }
 
-/* Image Styling */
 .we-image {
-  flex: 1; /* Image takes up the available space */
+  flex: 1;
   display: flex;
-  justify-content: flex-end; /* Align the image to the right */
+  justify-content: flex-end;
 }
 
 .school-image {
   width: 400%;
-  max-width:450px; /* Adjust the size of the image */
+  max-width: 450px;
   height: 450px;
-  object-fit: cover; /* Ensure the image fills the space without distortion */
+  object-fit: cover;
   margin-top: 40px;
 }
 
 /* Responsive Styling */
 @media (max-width: 768px) {
   .we-content {
-    flex-direction: column; /* Stack text and image vertically on smaller screens */
+    flex-direction: column;
     text-align: center;
   }
 
@@ -196,97 +212,88 @@ body {
   }
 
   .we-text h2 {
-    font-size: 1.5rem; /* Smaller heading for mobile */
+    font-size: 1.5rem;
   }
 
   .we-text p {
-    font-size: 1.0rem; /* Smaller text for mobile */
+    font-size: 1rem;
   }
 
   .school-image {
-    max-width: 100%; /* Make image responsive on smaller screens */
+    max-width: 100%;
   }
-
-
-
-
-
 }
 
 /* Quote Section Styles */
 .quote-section {
-  background-color: white; /* Light background color */
-  padding: 10vw 5%; /* Responsive padding using viewport width */
-  text-align: center; /* Center-align the text */
-  height: 110vh; /* Make the section take up the full height of the viewport */
+  background-color: white;
+  padding: 10vw 5%;
+  text-align: center;
+  height: 90vh;
   display: flex;
   justify-content: center;
-  align-items: center; /* Center content vertically */
-  flex-direction: column; /* Ensure text flows vertically */
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5px;
 }
 
-/* Styling for the quote text */
 .quote-text {
-  font-size: 2.5rem; /* Default font size for larger screens */
+  font-size: 2.5rem;
   font-weight: bold;
-  font-family: 'Crimson Text', serif; /* Same font family */
-  line-height: 1.5; /* Increased line height for better readability */
-  color: #333; /* Dark gray text */
-  max-width: 90%; /* Make sure text container doesn't exceed the screen */
-  margin: 0 auto; /* Center the text container */
-  word-wrap: break-word; /* Allow words to wrap if they are too long */
-  white-space: pre-wrap; /* Preserve white space and allow for manual line breaks */
-  display: inline-block; /* Allow for line break and alignment */
-  text-align: center; /* Center align text within the container */
+  font-family: 'Crimson Text', serif;
+  line-height: 1.5;
+  color: #333;
+  max-width: 90%;
+  margin: 0 auto;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  display: inline-block;
+  text-align: center;
 }
 
-/* This will limit the number of words per line by controlling the width */
 .quote-text span {
   display: inline-block;
   width: 100%;
 }
 
-/* Styling for the author name */
 .quote-author {
   display: block;
-  font-size: 1.5rem; /* Default font size for the author */
+  font-size: 1.5rem;
   font-weight: normal;
-  color: grey; /* Slightly lighter gray for the author */
-  margin-top: 20px; /* More space between quote and author */
+  color: grey;
+  margin-top: 20px;
   font-style: italic;
 }
 
-/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .quote-section {
-    padding: 15vw 5%; /* Adjust padding for smaller screens */
+    padding: 15vw 5%;
   }
 
   .quote-text {
-    font-size: 2rem; /* Adjust font size for smaller screens */
-    max-width: 85%; /* Limit the width of the text container */
+    font-size: 2rem;
+    max-width: 85%;
   }
 
   .quote-author {
-    font-size: 1.2rem; /* Adjust font size for author */
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 480px) {
   .quote-section {
-    padding: 20vw 5%; /* Even smaller padding for very small screens */
+    padding: 20vw 5%;
   }
 
   .quote-text {
-    font-size: 1.75rem; /* Smaller font size for very small screens */
-    max-width: 80%; /* Further limit the width of the text container */
+    font-size: 1.75rem;
+    max-width: 80%;
   }
 
   .quote-author {
-    font-size: 1rem; /* Smaller font size for the author */
+    font-size: 1rem;
   }
 }
-
 
 /* Campus Section Styles */
 .campus-section {
@@ -295,51 +302,463 @@ body {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  height: 90vh; /* Increased height for the section */
+  height: auto; /* Changed from fixed height to auto for flexibility */
   padding: 20px;
-  background-color: white; /* Light background color */
+  background-color: white;
 }
 
 .campus-description {
-  max-width: 800px; /* Limit width for better readability */
-  font-size: 1.1rem; /* Adjust font size */
-  line-height: 1.8;
+  max-width: 800px;
+  font-size: 1rem;
+  line-height: 1.5;
   color: #333;
-  margin-bottom: 10px; /* Reduce space between description and images */
+  margin-bottom: 2.5px;
 }
 
 .campus-description h1 {
-  font-size: 2.0rem;
-  font-weight: 100;
-  margin-top: 30px;
-  margin-bottom: 15px;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 10px;
   letter-spacing: 0.5px;
   color: black;
 }
 
+.campus-description p {
+  margin-bottom: 0px;
+}
+
 .campus-images {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 100px; /* Adjust spacing between campuses for better balance */
+  gap: 10px;
   width: 100%;
+  height: auto; /* Adjusted for responsiveness */
+  margin-top: 0px;
 }
 
 .campus {
-  text-align: center;
-  max-width: 450px; /* Increase max-width for individual campus */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5px;
 }
 
 .campus img {
-  width: 100%; /* Allow image to scale to container width */
-  height: auto;
-  border-radius: 0px; /* No rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  width: 100%;
+  height: 100%; /* Ensure image fills its container while maintaining aspect ratio */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.second-campus img {
+  transform: scale(0.875);
 }
 
 .campus h3 {
+  text-align: center;
   margin-top: 10px;
-  font-size: 1.5rem; /* Slightly increase font size for titles */
+  font-size: 1rem;
   font-weight: bold;
-  color: #333;
+}
+
+.learn-more-button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: maroon;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.learn-more-button:hover {
+  background-color: #6d1b1b;
+  transform: scale(1.05);
+}
+
+/* Media Query for Mobile and Tablet Devices */
+@media (max-width: 768px) {
+  .campus-section {
+    padding: 20px 10px; /* Adjust padding for smaller screens */
+  }
+
+  .campus-description {
+    font-size: 0.9rem; /* Smaller font size for better readability */
+    max-width: 100%;
+  }
+
+  .campus-description h1 {
+    font-size: 1.8rem; /* Adjust heading size for smaller screens */
+  }
+
+  .campus-images {
+    flex-direction: column; /* Stack the images vertically */
+    align-items: center; /* Center the images */
+    gap: 20px; /* Add space between images */
+  }
+
+  .campus {
+    width: 90%; /* Ensure the campus containers take up most of the screen */
+    max-width: 400px; /* Limit the max width for better layout control */
+  }
+
+  .campus img {
+    height: 250px; /* Adjust image height for smaller screens */
+  }
+
+  .learn-more-button {
+    font-size: 12px; /* Smaller button font size */
+    padding: 6px 12px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Further enhancements for very small screens (e.g., mobile phones) */
+@media (max-width: 480px) {
+  .campus-description h1 {
+    font-size: 1.6rem; /* Reduce heading size even more for very small screens */
+  }
+
+  .campus-description {
+    font-size: 0.85rem; /* Even smaller font size for very small screens */
+  }
+
+  .campus img {
+    height: 200px; /* Further reduce image size for very small screens */
+  }
+
+  .learn-more-button {
+    font-size: 10px; /* Further decrease font size */
+    padding: 5px 10px; /* Adjust padding */
+  }
+}
+
+
+/* School Info Section */
+.school-info {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+  margin-top: 10px;
+  height: auto; /* Changed from fixed height to auto for responsiveness */
+}
+
+.school-info-title {
+  font-size: 2.5rem;
+  color: #a51b25; /* Match the red shade in the design */
+  margin-bottom: 10px;
+}
+
+.school-info-intro {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+/* Flexbox Grid for Info Items */
+.info-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px; /* Limit the max width for better layout control */
+}
+
+.info-item {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  text-align: center;
+  text-decoration: none; /* Remove underline for links */
+  color: inherit; /* Keep text color consistent */
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  cursor: pointer; /* Indicate that it is clickable */
+}
+
+.info-item:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 0 10px 5px whitesmoke; /* Red border blur effect */
+  border: 2px solid whitesmoke; /* Highlight the border with a red color */
+}
+
+.info-item img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  transition: filter 0.3s ease;
+}
+
+.info-item:hover img {
+  filter: brightness(0.8); /* Dim the icon slightly on hover */
+}
+
+/* Media Query for Mobile and Tablet Devices */
+@media (max-width: 768px) {
+  /* Adjust grid layout for smaller screens */
+  .info-grid {
+    flex-direction: column; /* Stack the items vertically */
+    align-items: center; /* Center-align the items */
+  }
+
+  .info-item {
+    width: 90%; /* Make the items more flexible and take up 90% of container */
+    max-width: 400px; /* Allow items to grow but limit the max width */
+    margin-bottom: 20px; /* Add spacing between stacked items */
+  }
+
+  .school-info-title {
+    font-size: 2rem; /* Smaller title for smaller screens */
+  }
+
+  .school-info-intro {
+    font-size: 1rem; /* Adjust intro text size for better readability */
+    margin-bottom: 20px;
+  }
+
+  .school-info {
+    padding: 30px 15px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Optional: Further enhancements for very small screens (e.g. mobile phones) */
+@media (max-width: 480px) {
+  .school-info-title {
+    font-size: 1.8rem; /* Further decrease title font size */
+  }
+
+  .school-info-intro {
+    font-size: 0.9rem; /* Smaller intro text for mobile screens */
+  }
+
+  .info-item img {
+    width: 80px;
+    height: 80px; /* Smaller images for very small screens */
+  }
+}
+
+
+/* Campus Section */
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 2rem 0;
+}
+
+.image-card {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.image-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.image-card:hover img {
+  filter: brightness(50%);
+}
+
+.image-card:hover .overlay {
+  opacity: 1;
+}
+
+
+.academic-stages {
+  background-image: url('');
+  background-size: cover;
+  background-position: center;
+  padding: 50px 20px;
+  color: white;
+}
+
+.academic-stages img {
+  image-rendering: auto; /* or 'pixelated' for retro images */
+}
+
+.academic-stages {
+  will-change: background-image;
+}
+
+
+.academic-stages-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #5c3a2d; /* Badge brown color */
+  text-align: center;
+  position: relative;
+  margin-top: 0.5px;
+}
+
+.academic-stages-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 5px;
+  background-color: #5c3a2d; /* Badge brown color */
+  margin: 10px auto 0; /* Center the line */
+  transition: width 0.3s ease-in-out;
+}
+
+.academic-stages-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures images wrap on smaller screens */
+   /* Space between items */
+}
+
+.academic-stage-item {
+  position: relative;
+  width: 250px; /* Adjust to match the second image */
+  height: 600px; /* Adjust to match the second image */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.academic-stage-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.academic-stage-item:hover {
+  transform: translateY(-9px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.academic-stage-item:hover img {
+  opacity: 0.3; /* Dims the image on hover */
+}
+
+.academic-stage-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Hidden by default */
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.academic-stage-item:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.academic-stage-item .overlay p {
+  color: #fff;
+  font-size: 1.2rem; /* Adjust font size */
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+.academic-stage-item a {
+  text-decoration: none; /* Removes link underline */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .academic-stages {
+    padding: 40px 15px;
+  }
+
+  .academic-stage-item {
+    width: 220px; /* Smaller width */
+    height: 350px; /* Adjust height */
+  }
+
+  .academic-stage-item .overlay p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .school-info {
+    margin-top: 150px; /* Reduce margin to avoid overlap on smaller screens */
+  }
+
+  academic-stages {
+    padding: 60px 20px; /* Adjust padding for better spacing */
+  }
+
+
+  .academic-stage-item {
+    width: 180px;
+    height: 300px;
+  }
+
+  .academic-stages-title {
+    font-size: 1.5rem;
+  }
+
+  .academic-stage-item .overlay p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .school-info {
+    margin-top: 120px; /* Even smaller margin for mobile devices */
+  }
+
+  .academic-stages {
+    padding: 40px 10px; /* Further reduce padding */
+  }
+
+  .academic-stages {
+    padding: 20px 5px;
+  }
+
+  .academic-stage-item {
+    width: 150px;
+    height: 250px;
+  }
+
+  .academic-stages-title {
+    font-size: 1.3rem;
+  }
+
+  .academic-stage-item .overlay p {
+    font-size: 0.7rem;
+  }
 }
