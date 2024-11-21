@@ -1,0 +1,390 @@
+/* General Footer Styles */
+
+
+.footer {
+    background-color: white; /* Matches the gold shade in the design */
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-family: "Georgia', 'Crimson Text', serif";
+  }
+
+  /* Center the footer top content vertically and horizontally */
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 45vh; /* Adjust the height to cover a significant portion of the page */
+    margin-top: 0; /* Remove default margin */
+    background-color: #b9a052;
+
+  }
+  
+  /* Adjust heading size and spacing */
+  .footer-top h2 {
+    font-size: 1.7rem; /* Increase font size for emphasis */
+    font-weight: bold;
+    color: #fff;
+    margin: 30px 0; /* Add spacing above and below */
+    margin-bottom: 2.0px;
+}
+  
+  /* Adjust divider styling */
+  .footer-top .divider {
+    width: 100px; /* Slightly wider for better visual balance */
+    height: 3px; /* Thicker for emphasis */
+    margin: 1.5rem auto; /* Increase margin for spacing */
+    margin-top: 0.2px;
+    background-color: #fff;
+    border: none;
+
+  }
+  
+  /* Adjust paragraph styling */
+  .footer-top p {
+    font-size: 1.25rem; /* Slightly larger for readability */
+    margin: 1.5rem 0; /* Increase spacing for better alignment */
+    margin-top: 1.0px;
+   
+    color: #fff;
+    line-height: 1.6; /* Increase line height for readability */
+    max-width: 600px; /* Limit width for better alignment */
+  }
+  
+  /* Button styling */
+  .footer-button {
+    background-color: #d62828; /* Red button */
+    color: #fff;
+    padding: 1rem 2rem; /* Bigger padding for proportion */
+    border: none;
+    border-radius: 30px; /* Slightly larger border radius */
+    font-size: 1.2rem; /* Slightly larger font size */
+    cursor: pointer;
+    margin-top: 0.5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .footer-button:hover {
+    background-color: #b71d1d; /* Darker red for hover */
+  }
+
+  
+
+  /* Bottom Section */
+  .footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem auto;
+    text-align: left;
+   
+   
+  }
+  
+  /* Footer Columns */
+  .footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin: 1rem;
+
+  }
+  
+  .logo-section {
+    text-align: center;
+  }
+  
+  .footer-logo {
+    max-width: 120px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-column h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #3b3b3b;
+  }
+  
+  .footer-column p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #3b3b3b;
+  }
+  
+  .footer-column a {
+    color: #3b3b3b;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-column a:hover {
+    color: #d62828; /* Matches button hover color */
+  }
+  
+  /* Social Icons */
+  .footer-social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .footer-social-icons a {
+    font-size: 1.5rem;
+    color: #3b3b3b;
+    transition: color 0.3s;
+  }
+  
+  .footer-social-icons a:hover {
+    color: #d62828;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-column {
+      margin-bottom: 1.5rem;
+    }
+  
+    .footer-button {
+      margin: 1rem auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-top h2 {
+      font-size: 1.5rem;
+    }
+  
+    .footer-top p {
+      font-size: 0.95rem;
+    }
+  
+    .footer-column h3 {
+      font-size: 1rem;
+    }
+  
+    .footer-column p {
+      font-size: 0.9rem;
+    }
+  
+    .footer-social-icons a {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Footer Additional Section */
+.footer-additional {
+    background-color: #b9a052; /* Match footer color */
+    text-align: center;
+    padding: 1.5rem 0;
+    color: #fff;
+    font-size: 0.9rem;
+    
+  }
+  
+  .footer-additional p {
+    margin: 0.5rem 0;
+  }
+  
+  .footer-additional .footer-links {
+    margin-top: 1rem;
+  }
+  
+  .footer-additional .footer-links a {
+    margin: 0 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+  }
+  
+  .footer-additional .footer-links a:hover {
+    color: #d62828; /* Highlight color on hover */
+  }
+  
+
+
+  /* Base Media Queries */
+@media (max-width: 1024px) {
+    /* For medium tablets and smaller laptops */
+    .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-column {
+      margin-bottom: 1.5rem; /* Add spacing between columns */
+    }
+  
+    .footer-logo {
+      max-width: 100px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* For smaller tablets */
+    .footer-top h2 {
+      font-size: 1.4rem; /* Slightly smaller for smaller screens */
+    }
+  
+    .footer-top p {
+      font-size: 1.1rem;
+    }
+  
+    .footer-button {
+      font-size: 1rem;
+      padding: 0.8rem 1.5rem; /* Adjust padding for smaller buttons */
+    }
+  
+    .footer-column h3 {
+      font-size: 1rem;
+    }
+  
+    .footer-column p {
+      font-size: 0.9rem;
+    }
+  
+    .footer-social-icons a {
+      font-size: 1.3rem; /* Slightly smaller social icons */
+    }
+  
+    .footer-top {
+      padding: 1.5rem 1rem; /* Reduce padding for smaller screens */
+      height: auto; /* Let the content define the height */
+    }
+  
+    .footer-additional {
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    /* For large phones */
+    .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-column {
+      width: 100%; /* Make each column full width */
+      text-align: center; /* Center-align the content */
+      margin-bottom: 1rem;
+    }
+  
+    .footer-top h2 {
+      font-size: 1.3rem;
+    }
+  
+    .footer-top p {
+      font-size: 1rem;
+      max-width: 90%; /* Reduce paragraph width for readability */
+    }
+  
+    .footer-button {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  
+    .footer-column h3 {
+      font-size: 0.95rem;
+    }
+  
+    .footer-column p,
+    .footer-additional p {
+      font-size: 0.85rem;
+    }
+  
+    .footer-social-icons {
+      justify-content: center;
+    }
+  
+    .footer-social-icons a {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* For compact phones */
+    .footer-top {
+      padding: 1rem 0.5rem;
+    }
+  
+    .footer-top h2 {
+      font-size: 1.2rem;
+    }
+  
+    .footer-top p {
+      font-size: 0.9rem;
+    }
+  
+    .footer-button {
+      font-size: 0.8rem;
+      padding: 0.5rem 1rem;
+    }
+  
+    .footer-column h3 {
+      font-size: 0.85rem;
+    }
+  
+    .footer-column p {
+      font-size: 0.8rem;
+    }
+  
+    .footer-social-icons a {
+      font-size: 1rem;
+    }
+  
+    .footer-logo {
+      max-width: 80px; /* Shrink the logo further */
+    }
+  
+    .footer-additional {
+      padding: 1rem 0;
+      font-size: 0.8rem;
+    }
+  
+    .footer-additional .footer-links a {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    /* For very small phones */
+    .footer-top h2 {
+      font-size: 1rem; /* Smaller heading */
+    }
+  
+    .footer-top p {
+      font-size: 0.8rem;
+    }
+  
+    .footer-button {
+      font-size: 0.75rem;
+      padding: 0.4rem 0.8rem;
+    }
+  
+    .footer-column h3 {
+      font-size: 0.75rem;
+    }
+  
+    .footer-column p {
+      font-size: 0.75rem;
+    }
+  
+    .footer-social-icons a {
+      font-size: 0.9rem;
+    }
+  
+    .footer-additional {
+      font-size: 0.7rem;
+    }
+  }
+  

@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import "../styles/Home.css";
 import { useEffect } from "react";
+import Footer from "../components/Footer";
 
 
 const Home = () => {
@@ -106,7 +107,7 @@ const Home = () => {
               href: "/history",
               imgSrc: "/images/history.png",
               title: "History of Leerand Preparatory and Primary School",
-              text: "Leerand Preparatory and Primary School was founded in 1998 by Fr. Robert Vujs.",
+              text: "Leerand Preparatory and Primary School was founded in 2015.....",
             },
             {
               href: "/motto-mission-vision",
@@ -158,11 +159,9 @@ const Home = () => {
 
 
 
+<Footer/>
+    </div>
 
-
-  
-
-</div>
   
 );
 };
